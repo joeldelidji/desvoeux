@@ -3,107 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Mariage G&J</title>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Livre d'or – Grâce & Joël</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root { --gold: #B2AC88; --dark: #2C3E50; --bg: #F9F9F9; }
-        body { font-family: 'Jost', sans-serif; background: var(--bg); color: var(--dark); margin: 0; padding-bottom: 50px; }
-        header { background: var(--dark); color: white; text-align: center; padding: 20px; }
-        
-        .tabs { display: flex; overflow-x: auto; background: white; sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .tab-btn { flex: 1; padding: 15px; border: none; background: none; font-weight: 500; cursor: pointer; white-space: nowrap; }
-        .tab-btn.active { border-bottom: 3px solid var(--gold); color: var(--gold); }
+        :root {
+            --eucalyptus: #94A684;
+            --peach: #E6A4B4;
+            --blush: #F3D7D7;
+            --cream: #FFFDF9;
+            --dark: #4A4A4A;
+        }
 
-        .content-section { display: none; padding: 20px; animation: fadeIn 0.3s; }
-        .content-section.active { display: block; }
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-        .card { background: white; padding: 15px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        h3 { color: var(--gold); margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        ul { list-style: none; padding: 0; }
-        li { padding: 5px 0; border-bottom: 1px thin #f9f9f9; display: flex; justify-content: space-between; }
-        .time { font-weight: bold; color: var(--gold); margin-right: 10px; }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--eucalyptus);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .instructions i {
+            color: var(--peach);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .widget-box {
+            background: white;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 2px dashed var(--blush);
+            min-height: 450px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--peach);
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Staff G&J 2026</h1>
-    <p>Coordination & Logistique</p>
-</header>
+<div class="container">
+    <h1>Le Livre d'Or Vidéo & Audio</h1>
+    <div class="subtitle">Grâce & Joël — 4 Juillet 2026</div>
 
-<div class="tabs">
-    <button class="tab-btn active" onclick="openTab(event, 'equipe')">Équipes</button>
-    <button class="tab-btn" onclick="openTab(event, 'planning')">Planning</button>
-    <button class="tab-btn" onclick="openTab(event, 'logistique')">Logistique</button>
+    <div class="instructions">
+        <i class="fa-solid fa-camera-retro"></i>
+        <p>Laissez un message éternel aux mariés ! <br>
+        Cliquez ci-dessous pour vous enregistrer en <strong>vidéo</strong>, laisser un message <strong>audio</strong> ou importer un souvenir depuis votre téléphone.</p>
+    </div>
+
+    <div class="widget-box">
+        <iframe src="https://tally.so/embed/EkZkvr?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Livre d'or G&J"></iframe>
+    </div>
+
+    <footer>Merci pour votre amour et votre présence...</footer>
 </div>
-
-<div id="equipe" class="content-section active">
-    <div class="card">
-        <h3>Comité PCO</h3>
-        <ul>
-            <li>Eudes <span>Responsable</span></li>
-            <li>Taty <span>Assistante</span></li>
-            <li>Alex <span>Membre</span></li>
-        </ul>
-    </div>
-    <div class="card">
-        <h3>Service & Accueil</h3>
-        <p><strong>Chef : Jean Marc</strong></p>
-        <p>Freud, Fredy, Ange, Audrey, Floriane</p>
-    </div>
-</div>
-
-<div id="planning" class="content-section">
-    <div class="card">
-        <h3>Après-midi</h3>
-        <ul>
-            <li><span class="time">14:30</span> Mairie de Bagneux</li>
-            <li><span class="time">16:15</span> Photos Parc des Sceaux</li>
-            <li><span class="time">18:00</span> Départ vers Palaiseau</li>
-        </ul>
-    </div>
-    <div class="card">
-        <h3>Soirée</h3>
-        <ul>
-            <li><span class="time">18:30</span> Vin d'Honneur</li>
-            <li><span class="time">20:30</span> Ouverture Dîner</li>
-            <li><span class="time">22:30</span> Gâteau</li>
-        </ul>
-    </div>
-</div>
-
-<div id="logistique" class="content-section">
-    <div class="card">
-        <h3>Flotte Auto</h3>
-        <ul>
-            <li>Voiture Constant <span>Garçons d'Honneur</span></li>
-            <li>Voiture Joël <span>Filles d'Honneur</span></li>
-            <li>Voiture Eudes <span>Caméraman</span></li>
-        </ul>
-    </div>
-    <div class="card" style="background: #FFF4E5; border: 1px solid #FFD8A8;">
-        <h3>À Définir (Urgent)</h3>
-        <ul>
-            <li>Responsable Gâteau ?</li>
-            <li>Chauffeur Utilitaire ?</li>
-            <li>Responsable Cocktail ?</li>
-        </ul>
-    </div>
-</div>
-
-<script>
-    function openTab(evt, tabName) {
-        var i, content, tabs;
-        content = document.getElementsByClassName("content-section");
-        for (i = 0; i < content.length; i++) { content[i].className = content[i].className.replace(" active", ""); }
-        tabs = document.getElementsByClassName("tab-btn");
-        for (i = 0; i < tabs.length; i++) { tabs[i].className = tabs[i].className.replace(" active", ""); }
-        document.getElementById(tabName).className += " active";
-        evt.currentTarget.className += " active";
-    }
-</script>
 
 </body>
 </html>
